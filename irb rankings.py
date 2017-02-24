@@ -39,7 +39,7 @@ def parse_data(driver, writer):
             score = entry.find_all("td")[3].get_text()
         except:
             score = ""
-        adata = (tn,d,score)       
+        adata = (tn,d.strip(),score)       
         writer.writerow(adata)
     print(d)
 
